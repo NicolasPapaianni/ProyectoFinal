@@ -1,4 +1,22 @@
-<h1>Nombre:{{new_product.name}}</h1>
-<h2>Precio: {{new_product.price}}</h2>
-<h3>Descripcion: {{new_product.description}}</h3>
-<h3>Stock: {{new_product.stock}}</h3>
+{% extends 'base.html' %}
+
+{% block titulo %}
+Carga de Productos
+{% endblock %}
+
+{% block contenido_a_cambiar %}
+
+<form action="" method="POST">
+{% csrf_token %}
+
+<table>
+
+    {{form.as_table}}
+
+    
+</table>
+<input type="submit" value="Enviar">
+</form>
+
+
+{% endblock %}

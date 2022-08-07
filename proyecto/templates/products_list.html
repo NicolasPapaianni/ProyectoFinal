@@ -4,10 +4,20 @@
 
 
     {% for product in products %}
-    <h1>Nombre:{{new_product.name}}</h1>
-    <h2>Precio: {{new_product.price}}</h2>
-    <h3>Descripcion: {{new_product.description}}</h3>
-    <h3>Stock: {{new_product.stock}}</h3>
-    {% endfor %}
+        <div class="card" style="width: 18rem;">
+            <img src="https://birrapedia.com/img/modulos/cerveza/d72/patagonia-porter_15350157760026_t.jpg"
+                class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Nombre: {{new_product.name}}</h5>
+                    <p class="card-text">Precio: {{new_product.price}}</p>
+                    <p class="card-text">Descripcion: {{new_product.description}}</p>
+                    <p class="card-text">Stock: {{new_product.stock}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+
+        
+{% endfor %}
 
 {% endblock %}
