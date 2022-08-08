@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+  Registracion de usuario
+{% endblock %}
+
+{% block contenido_a_cambiar %} 
+
+    <h2>Registro del usuario</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <table>
+
+            {{form.as_table}}
+
+    
+            </table>
+
+    <input type="Submit" value="Registrarse">
+    
+   
+
+    </form>
+
+
+{% endblock %}
