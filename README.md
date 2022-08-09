@@ -18,3 +18,18 @@ Este un proyecto en desarrollo basado en una empresa ficticia de servicios de de
 un catalogo de productos, bebidas alcoholicas (con sus respectivas categorias) y bebidas no alcoholicas. Ademas orefecerá diferentes promociones, combos, ofertas y descuentos. EL servicio ofrecido es únicamente a domicilio por lo cual el usuario deberá estar registrado obligatoriamente en la página web.
 
 Adicionalmente, el usuario tendra la posibilidad de suscribirse al newsletter quincenal que emite la empresa en pos de recibir novedades ya sea de los productos, el servicio ofrecido o bien a nivel empresa. 
+
+
+
+<h3>Estado del Proyecto</h3>
+
+El proyecto se encuentra en desarrollo. Entre los objetivos del mismo es poder crear diferentes subproyectos/apps en los cuales se pueda crear a su vez vistas, modelos, formularios, urls, entre otros y reflejar lo trabajado en templates con el fin de visualizar lo que se requiera. 
+En este proyecto en cuestión, se centralizará en la creación de productos y su categorización y en el almacenamiento de usuarios ya que son la principal fuente de ingreso. 
+
+<h3>Tecnologías utilizadas para el proyecto</h3>
+
+-Python
+-Visual Studio Code
+-Django
+-DB Browser (SQLite)
+-GitHub
