@@ -27,9 +27,7 @@ def create_product(request):
 
 def products_list(request):
     products = Products.objects.all()
-    context ={
-        'products': products
-    }
+    context ={'products': products  }
 
     return render(request, 'products/products_list.html', context=context)
 

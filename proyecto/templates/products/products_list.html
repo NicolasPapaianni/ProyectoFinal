@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 
+{% block titulo %}
+    Lista Productos
+{% endblock %}
+
 {% block contenido_a_cambiar %}
 
 
-    {% for product in products %}
+        {% for product in products %}
         <div class="card" style="width: 18rem;">
             <img src="https://birrapedia.com/img/modulos/cerveza/d72/patagonia-porter_15350157760026_t.jpg"
                 class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Nombre: {{new_product.name}}</h5>
-                    <p class="card-text">Precio: {{new_product.price}}</p>
-                    <p class="card-text">Descripcion: {{new_product.description}}</p>
-                    <p class="card-text">Stock: {{new_product.stock}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text">Precio: {{product.price}}</p>
+                <p class="card-text">Descripcion: {{product.description}}</p>
+                <p class="card-text">Stock: {{product.stock}}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
-
-    {% endfor %}
+        {% endfor %}
 
 {% endblock %}
