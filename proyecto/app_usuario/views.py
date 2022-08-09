@@ -5,9 +5,7 @@ from django.contrib.auth import authenticate, login
 # Create your views here.
 
 def registro_usuario(request):
-    context = {
-        'form': Formulario_usuario()
-    }
+    context = {'form': Formulario_usuario()}
     
     if request.method == 'POST':
         form = Formulario_usuario(request.POST)
@@ -20,6 +18,7 @@ def registro_usuario(request):
             login(request,user)
         
         return redirect(to='Home')
+    
 
 
     return render(request, 'registro_usuario.html', context )

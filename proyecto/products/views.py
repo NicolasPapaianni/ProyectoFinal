@@ -23,7 +23,7 @@ def create_product(request):
     elif request.method == 'GET':
         form = Formulario_productos()
         context = {'form': form}
-        return render(request, 'new_product.html', context=context )
+        return render(request, 'products/new_product.html', context=context )
 
 def products_list(request):
     products = Products.objects.all()
@@ -31,13 +31,13 @@ def products_list(request):
         'products': products
     }
 
-    return render(request, 'products_list.html', context=context)
+    return render(request, 'products/products_list.html', context=context)
 
 def formulario(request):
     print(request.method)
     if request.method== 'POST':
         Products.objects.create(name= request.POST['name'])
-    return render(request, 'formulario.html', context={})
+    return render(request, 'products/formulario.html', context={})
 
 
 def search_products(request):
@@ -46,4 +46,4 @@ def search_products(request):
     context = {
         'products': products
             }
-    return render(request, 'search_products.html', context=context)
+    return render(request, 'products/search_products.html', context=context)
