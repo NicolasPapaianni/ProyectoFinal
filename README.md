@@ -33,3 +33,10 @@ En este proyecto en cuestión, se centralizará en la creación de productos y s
 -Django
 -DB Browser (SQLite)
 -GitHub
+
+<h3>Acceso al proyecto</h3>
+
+El proyecto esta cargado únicamente en mi GitHub personal de manera pública para el acceso de cualquier usuario.
+Dejo el URL en cuestión:
+
+**https://github.com/NicolasPapaianni/ProyectoFinal**
