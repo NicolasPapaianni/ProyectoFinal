@@ -17,7 +17,8 @@ def registro_usuario(request):
             user = authenticate(username=username, password=password)
             login(request,user)
         
-        return redirect(to='Home')
+        return redirect(registro_usuario)  ## no debería ir a una view en este caso, solo almacenarse en la DB
+                                          ##pero al crear un usuario me arroja error. 
     
 
 
