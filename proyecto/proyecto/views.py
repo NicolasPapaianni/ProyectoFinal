@@ -13,3 +13,6 @@ def registrarse(request):
 
 def template_registrarse(request):
     return render(request, 'template_registrarse.html', context={})
+
+def template_contactenos(request):
+    return render(request, 'template_contactenos.html', context={})
