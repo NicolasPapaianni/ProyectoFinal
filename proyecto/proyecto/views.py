@@ -16,3 +16,6 @@ def template_registrarse(request):
 
 def template_contactenos(request):
     return render(request, 'template_contactenos.html', context={})
+
+def index(request):
+    return render(request, 'index.html')
