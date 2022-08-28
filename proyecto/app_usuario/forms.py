@@ -5,7 +5,12 @@ from django.contrib.auth.models import User
 
 
 
-class Formulario_usuario(UserCreationForm):             
+class Formulario_usuario(UserCreationForm):    
+
+    email = forms.EmailField(required=True)
+    password1: forms.CharField(label = 'Password', widget = forms.PasswordInput)
+    password2: forms.CharField(label = 'Password confirmacion', widget = forms.PasswordInput)
+
 
     class Meta: 
         model = User
@@ -18,3 +23,4 @@ class Formulario_usuario(UserCreationForm):
         'password2': 'Confirmar contraseña'
         }
 
+        help_texts = {k: '' for k in fields}
