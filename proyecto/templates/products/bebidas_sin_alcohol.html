@@ -10,13 +10,9 @@
         {% for product in products %}
 
         <div class="card" style="width: 18rem;">
-            {% if product.image % }
-            <img src="{{perfil.image.url}}" class="card-img-top">
-            {% else % }
 
             <img src="https://birrapedia.com/img/modulos/cerveza/d72/patagonia-porter_15350157760026_t.jpg"
                 class="card-img-top">
-            {% endif % }
             <div class="card-body">
                 <h5 class="card-title">{{product.name}}</h5>
                 <p class="card-text">Precio: {{product.price}}</p>

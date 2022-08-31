@@ -3,33 +3,61 @@ from django.shortcuts import render, redirect
 from products.models import Products
 from products.forms import Formulario_productos
 
+
 # Create your views here.
 
-def create_product(request):
+def create_product_sin_alcohol(request):
+    if request.user.is_superuser:
+        if request.method== 'POST':
+            form = Formulario_productos(request.POST, request.FILES)
 
-    if request.method== 'POST':
-        form = Formulario_productos(request.POST)
+            if form.is_valid():
+                Products.objects.create(
+                    name = form.cleaned_data ['name'],
+                    price = form.cleaned_data['price'],
+                    description = form.cleaned_data['description'],
+                    stock = form.cleaned_data['stock'],
+                    image = form.cleaned_data['image']
+            )
 
-        if form.is_valid():
-            Products.objects.create(
-                name = form.cleaned_data ['name'],
-                price = form.cleaned_data['price'],
-                description = form.cleaned_data['description'],
-                stock = form.cleaned_data['stock']
-        )
+                return redirect(bebidas_sin_alcohol)
 
-            return redirect(products_list)
+        elif request.method == 'GET':
+            form = Formulario_productos()
+            context = {'form': form}
+            return render(request, 'products/new_product.html', context=context )
+    
+    return redirect('login')
 
-    elif request.method == 'GET':
-        form = Formulario_productos()
-        context = {'form': form}
-        return render(request, 'products/new_product.html', context=context )
+def create_product_con_alcohol(request):
+    if request.user.is_superuser:
+        if request.method== 'POST':
+            form = Formulario_productos(request.POST, request.FILES)
 
-def products_list(request):
-    products = Products.objects.all()
-    context ={'products': products  }
+            if form.is_valid():
+                Products.objects.create(
+                    name = form.cleaned_data ['name'],
+                    price = form.cleaned_data['price'],
+                    description = form.cleaned_data['description'],
+                    stock = form.cleaned_data['stock'],
+                    image = form.cleaned_data['image']
+            )
 
-    return render(request, 'products/products_list.html', context=context)
+                return redirect(bebidas_con_alcohol)
+
+        elif request.method == 'GET':
+            form = Formulario_productos()
+            context = {'form': form}
+            return render(request, 'products/new_product.html', context=context )
+    
+    return redirect('login')
+
+
+# def products_list(request):
+#     products = Products.objects.all()
+#     context ={'products': products  }
+
+#     return render(request, 'products/products_list.html', context=context)
 
 def formulario(request):
     print(request.method)
@@ -45,3 +73,18 @@ def search_products(request):
         'products': products
             }
     return render(request, 'products/search_products.html', context=context)
+
+def bebidas_con_alcohol(request):
+    products = Products.objects.all()
+    context ={'products': products  }
+
+    return render(request, 'products/bebidas_con_alcohol.html', context=context)
+
+
+def bebidas_sin_alcohol(request):
+    products = Products.objects.all()
+    context ={'products': products  }
+
+    return render(request, 'products/bebidas_sin_alcohol.html', context=context)
+
+    

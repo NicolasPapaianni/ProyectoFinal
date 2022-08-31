@@ -22,5 +22,3 @@ class Formulario_usuario(UserCreationForm):
         'password1': 'Contraseña', 
         'password2': 'Confirmar contraseña'
         }
-
-        help_texts = {k: '' for k in fields}

@@ -7,3 +7,4 @@ class Formulario_productos(forms.Form):
     price = forms.FloatField()
     description = forms.CharField(max_length=300)
     stock = forms.IntegerField()
+    image = forms.ImageField(required=False)

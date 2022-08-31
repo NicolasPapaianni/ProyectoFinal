@@ -18,4 +18,5 @@ def template_contactenos(request):
     return render(request, 'template_contactenos.html', context={})
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'template_home.html')
+
