@@ -1,7 +1,7 @@
 <h1 align= 'center'> ProyectoFinal </h1>
 
 <h3 align= 'center'>Delivery de alcohol </h3>
-<h4 align= 'çenter'>(falta el nombre de la 'empresa') </h4>
+<h4 align= 'çenter'>Papa's Drinks Delivery </h4>
 
 
 ![Imagen moto](https://user-images.githubusercontent.com/109943837/183703268-6776bbf8-4bbb-48f8-b6b7-5f5d7c2e433d.jpg)
@@ -10,7 +10,7 @@
 
 
 
-
+<h2 Nombre y Apellido: Nicolas Papaianni </h2>
 
 <h3>Descripción del Proyecto</h3>
 
