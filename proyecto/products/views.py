@@ -1,3 +1,4 @@
+from turtle import home
 from unicodedata import name
 from django.shortcuts import render, redirect
 from products.models import Products
@@ -53,11 +54,6 @@ def create_product_con_alcohol(request):
     return redirect('login')
 
 
-# def products_list(request):
-#     products = Products.objects.all()
-#     context ={'products': products  }
-
-#     return render(request, 'products/products_list.html', context=context)
 
 def formulario(request):
     print(request.method)
@@ -88,3 +84,14 @@ def bebidas_sin_alcohol(request):
     return render(request, 'products/bebidas_sin_alcohol.html', context=context)
 
     
+
+def delete_product(request, pk):
+    if request.method == 'GET':
+        product = Products.objects.get(pk=pk)
+        context = {'product': product}
+        return render(request, 'products/delete_product.html', context = context)
+
+    if request.method == 'POST':
+        product = Products.objects.get(pk=pk)
+        product.delete()
+        return redirect(home)

@@ -7,7 +7,7 @@
 
     {% for product in products %}
         <div  diclass="card" style="width: 18rem; display: flex;">
-            <img src="https://birrapedia.com/img/modulos/cerveza/d72/patagonia-porter_15350157760026_t.jpg"
+            <img src="{{product.image.url}}"
                 class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{product.name}}</h5>
