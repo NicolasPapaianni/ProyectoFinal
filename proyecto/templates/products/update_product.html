@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+    {% block titulo %}
+        Editar producto
+    {% endblock %}
+
+{% block contenido_a_cambiar %}
+
+<form action="" method="POST">
+{% csrf_token %}
+
+<table>
+
+    {{form.as_table}}
+
+    
+</table>
+<input type="submit" value="Actualizar">
+</form>
+
+
+{% endblock %}
